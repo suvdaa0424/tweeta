@@ -82,9 +82,13 @@ router.post('/login', async (req, res) => {
   // login
   req.session.user = user
 
+  // extract password from user, assign all other to a new userData variable
+  const { password, ...userData } = user.dataValues;
+
   // respond with success/error
   res.json({
     success: 'Successfully logged in'
+    user: userData 
   })
 })
 

@@ -1,10 +1,11 @@
 import React from 'react'
 
 function RelativeTime(props) {
+    // TODO: Implement relative time
     return (
-        <div>
-            {props.time}
-        </div>
+        <span>
+            {new Date(props.time).toLocaleString()}
+        </span>
     )
 }
 
